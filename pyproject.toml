@@ -1,0 +1,13 @@
+[project]
+name = "adtp"
+version = "0.1.0"
+description = "Adaptive Data Transport Protocol: reliable transport over UDP with RTT-based loss classification"
+requires-python = ">=3.10"
+dependencies = ["fastapi>=0.110", "uvicorn[standard]>=0.29"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.23"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
